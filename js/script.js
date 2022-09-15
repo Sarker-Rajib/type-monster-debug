@@ -71,7 +71,7 @@ const gameOver = () => {
   const timeTaken = (finishTime - startTime) / 1000;
 
   const wordCount = questionText.split(" ").length;
-  const WPM = parseInt((wordCount / timeTaken) * 60);
+  const WPM = Math.round((wordCount / timeTaken) * 60);
   // console.log(WPM);
 
   // show result modal

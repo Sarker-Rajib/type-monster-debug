@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,84 @@
    <link rel="shortcut icon" href="images/speed.png" type="image/x-icon">
    <title>Speed Typer | Blog</title>
    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
-   <link
-   href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
-   rel="stylesheet"
-   />
+   <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap" rel="stylesheet" />
    <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
    <header>
       <section>
          <div class="container">
-            <h1>Blog</h1>
+            <div class="nav-bar">
+               <a class="nav-link-custom" href="index.html">Home</a>
+               <a class="nav-link-custom" href="#">Blog</a>
+            </div>
          </div>
       </section>
    </header>
+
+   <main>
+      <section class="pt-3">
+         <div class="container">
+            <div class="main-division">
+               <h1 class="text-center">
+                  Question and Answers
+               </h1>
+
+               <div class="blog">
+                  <h2>Q1. Whats the differences between Local storage vs Session Storage ?</h2>
+                  <h5>Answe:</h5>
+                  <p>
+                     Session Storage: <br>
+                     A browsing session approximates your use of a website. If you visit a site, browse around for a
+                     bit, then turn off your computer, you can think of that time as a single session. Your browser
+                     configuration may change this in subtle ways, but a session aims to represent the chunk of time you
+                     interact with a site.
+
+                     Session storage is unique to each browser tab. If you open a new tab and navigate to the same site,
+                     you'll start a new session with its own storage. However, if you use a "duplicate tab" feature in
+                     your browser, that may reuse the same session. You can't rely too much on the specific details of a
+                     "session". Instead, focus on the core concept: session storage is temporary.
+                  </p>
+                  <p>
+                     What Is Local Storage: <br>
+                     Local storage maintains data across all instances of a site, whether they're in different tabs or
+                     windows. It is also permanent, so the data won't disappear when you close your browser.
+
+                     When you open a website that previously used local storage, it will always have access to that
+                     stored data.
+
+                     As a web developer, you can use this mechanism to retain data about a user. Some websites might use
+                     this to keep you logged in or provide a more personalized experience.
+
+                     Like session storage, you can set a local storage object with one line of JavaScript code:
+                     While session storage clears data as soon as the session ends, the only way to clear local storage
+                     is to explicitly delete it. Both storage types offer two methods to clear data. The first removes a
+                     specific item of data based on its key:
+                  </p>
+               </div>
+
+               <div class="blog">
+                  <h2>Q1. Whats the differences Globl scope vs blocked scope ?</h2>
+                  <h5>Answe:</h5>
+                  <p>
+                     Global scope: <br>
+                     In a programming environment, the global scope is the scope that contains, and is visible in, all
+                     other scopes. In client-side JavaScript, the global scope is generally the web page inside which
+                     all the code is being executed
+                  </p>
+
+                  <p>
+                     Block scope: <br>
+                     Block scoping means declaring a variable, not just inside a function, but around any curly brackets
+                     like if statements or loops. The variable itself let i is still in memory, but the engine just
+                     won't allow you to access it like before when we used var
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
 </body>
+
 </html>
