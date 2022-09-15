@@ -70,6 +70,10 @@ const gameOver = () => {
   const finishTime = new Date().getTime();
   const timeTaken = (finishTime - startTime) / 1000;
 
+  const wordCount = questionText.split(" ").length;
+  const WPM = parseInt((wordCount / timeTaken) * 60);
+  // console.log(WPM);
+
   // show result modal
   resultModal.innerHTML = "";
   resultModal.classList.toggle("hidden");
@@ -80,13 +84,15 @@ const gameOver = () => {
   display.classList.add("inactive");
   // show result
   resultModal.innerHTML += `
-    <h1 class="pb-15">Finished!</h1>
+    <h1 class="pb-10">Finished!</h1>
+    <p>Total Word count: <span class="bold">${parseInt(wordCount)}</span></p>
     <p>You took: <span class="bold">${parseInt(timeTaken)}</span> seconds</p>
-    <p class="pb-15">You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p class="pb-10">You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p class="pb-15 Word-per-minute">Your Type Speed is <span class="bold Yellow">${WPM}</span> Words per minute</p>
     <button onclick="closeModal()">Close</button>
   `;
 
-  addHistory(questionText, timeTaken, errorCount);
+  addHistory(questionText, timeTaken, errorCount, WPM);
 
   // restart everything
   startTime = null;
@@ -105,6 +111,7 @@ const start = () => {
   if (startTime) return;
 
   let count = 3;
+
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
