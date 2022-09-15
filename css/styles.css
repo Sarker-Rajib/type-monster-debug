@@ -148,21 +148,29 @@ button {
 }
 
 #histories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+}
+@media(max-width: 1199px){
+  #histories{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(max-width: 767px){
+  #histories{
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
   width: 100%;
-  height: 100%;
-  padding: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* height: 100%; */
   padding: 20px 30px;
   color: white;
   border-radius: 15px;
+  border: 2px solid #9dffad;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     92.49deg,
