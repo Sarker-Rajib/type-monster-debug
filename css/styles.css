@@ -284,8 +284,16 @@ button {
 }
 
 .main-division{
-  background: rgb(229, 215, 255);
+  background: rgb(138, 255, 245);
   border-radius: 15px;
   border: 2px solid #ccff6d;
   padding: 15px;
+}
+
+.blog{
+  border-radius: 15px;
+  border: 2px solid rgb(255, 231, 10);
+  margin-bottom: 10px;
+  padding: 10px;
+  background: rgb(255, 255, 255);
 }
