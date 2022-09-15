@@ -29,7 +29,7 @@ function displayHistory() {
   const previousTests = JSON.parse(localStorage.getItem("testHistory")) || [];
 
   previousTests.forEach((test) => {
-    console.log(test);
+    // console.log(test);
     const newRow = document.createElement("div");
     newRow.classList.add("card");
 
